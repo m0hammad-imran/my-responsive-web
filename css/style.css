@@ -1,0 +1,877 @@
+
+body{
+
+	font-family: 'Oswald', sans-serif;
+	/*font-family: 'Cinzel Decorative', cursive;*/
+
+
+}
+/*
+==============
+navbar css
+============== 
+*/
+
+.center{
+	display: block;
+	margin: 0 auto;
+}
+
+.text-center{
+	text-align: center;
+}
+
+
+.nav{
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.nav * {
+	box-sizing: border-box;
+	transition: all 0.35s ease;
+
+}
+
+.nav li {
+	display: inline-block;
+	list-style: outside none none;
+	margin: 0.5em 1em;
+	padding: 0;
+}
+
+.nav a{
+	padding: .5em 0.8em;
+	color: rgba(255,255,255,0.5);
+	position: relative;
+	text-decoration: none;
+	font-size: 20px;
+    
+}
+
+.nav a:before,
+.nav a:after{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	content: "";
+	transition: all 0.35s ease;
+	opacity: 0;
+}
+
+.nav a:before {
+	right: 0;
+	top: 0;
+	border-right: 3px solid cyan;
+	border-top: 3px solid cyan;
+	transform: translate(-100%, 50%);
+}
+
+.nav a:after{
+
+	left: 0;
+	bottom: 0;
+	border-left: 3px solid cyan;
+	border-bottom: 3px solid cyan;
+	transform: translate(100%, -50%);
+}
+
+a:hover:before,
+a:hover:after{
+	transform: translate(0%, 0%);
+	opacity: 1;
+}
+
+/*
+=====================
+bg section css
+=====================
+*/
+
+.animate-type{
+	padding-top: 20px;
+}
+.bg-text{
+	padding: 0 0;
+}
+.bg-text h3{
+	color: #fff;
+	font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.bg-text h2 span{
+font-family: 'Cinzel Decorative', cursive;
+    color: #fff;
+    margin: 0;
+    font-size: 89px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.65);
+
+}
+
+
+.bg-img{
+	background: url(../vendor/img/b4.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+
+/*
+======================
+animate type css
+======================
+*/
+.line{
+	color: #00f1f7;
+	position: relative;
+	width: 13em;
+	border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
+}
+
+/*
+===========
+animation
+============
+*/
+
+.anim-typewriter {
+	animation: typewriter 4s steps(40) 1s 1 normal both,
+	blinkTextcursor 500ms steps(40) infinite normal;
+
+}
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 13em;
+	}
+}
+
+
+@keyframes blinkTextcursor {
+
+ from {
+ 	border-right-color: rgba(255, 255, 255, 0.75);
+ }
+
+ to {
+ 	border-right-color: transparent;
+ }
+
+
+}
+
+
+/*
+====================
+top-arrow
+=====================
+*/
+.top-arrow{
+	position: fixed;
+	bottom: 0;
+	right: 1%;
+	
+}
+
+/*
+========================
+about me section
+========================
+
+*/
+
+.about-me h2{
+	font-family: 'Cinzel Decorative', cursive;
+	    font-weight: 600;
+	   
+
+
+}
+
+section#about {
+	padding-bottom: 0;
+	padding-top: 5%;
+}
+
+.bottom-line {
+    border-bottom: 2px solid #40c0c3;   
+     width: 5%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.fold{
+	
+	width: 500px;
+	height: 300px;
+	position: relative;
+
+}
+
+.fold .card{
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	transform: translate(90%, 10%) perspective(2000px);
+	transform-style: preserve-3d;
+	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 100px rgba(0,0,0,.5);
+	transition: 1s;
+
+}
+
+.fold .card:hover{
+
+transform: translate(90%, 10%) perspective(2000px) rotate(-10deg);
+box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);	
+}
+
+.fold .card:before{
+
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-color: cyan;
+	transform-origin: bottom;
+	transform: skewX(-45deg);
+}
+
+.fold .card:after{
+ content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    background-color: cyan;
+    width: 5px;
+    height: 100%;
+    transform-origin: left;
+transform: skewY(-45deg);
+
+}
+
+.card .img-box{
+
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-origin: left;
+	transition: 1s;
+	z-index: 1;
+
+}
+
+.card:hover .img-box{
+
+transform: rotateY(-135deg);
+
+}
+
+.card .img-detail{
+
+position: absolute;
+top: 0;
+left: 0;
+box-sizing: border-box;
+z-index: -1;
+
+}
+
+.card .img-detail h2{
+	font-size: 15px;
+	text-align: center;
+	padding-top: 6px;
+	line-height: 20px;
+}
+
+
+.card .img-detail p{
+	font-size: 15px;
+	text-align: center;
+	padding: 10px;
+	padding-top: 1px;
+}
+
+
+
+
+}
+.des-box h2{
+
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+.pad{
+	padding-top: 5%;
+}
+/*
+========================
+my skill bar css
+=========================
+*/
+.experties{
+
+	position: relative;
+	transform: translate(0%, 0%);
+	background: #a8a6a8;
+	padding: 5px 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0, 0.5);
+margin-bottom: 5%;
+}
+
+.skillbox{
+
+	box-sizing: border-box;
+	width: 100%;
+	margin: 20px 0;
+}
+.skillbox p{
+text-transform: uppercase;
+margin: 0 0 10px;
+padding: 0;
+letter-spacing: 1px;
+font-weight: bold;
+}
+
+.skillbox p:nth-child(2){
+
+	float: right;
+	position: relative;
+	top: -30px;
+}
+
+.skill{
+
+	background: #ccc;
+	padding: 1px;
+	box-sizing: border-box;
+	border: 1px solid #000;
+	border-radius: 2px; 
+
+}
+.skill-level{
+	background: cyan;
+	width: 100%;
+	height: 10px;
+}
+
+/*
+===========================
+my service section css
+===========================
+
+*/
+
+p.text-center {
+    padding: 21px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #a7a6a8;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.Service h2{
+	margin-top: 10%;
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 600;
+	text-transform: uppercase;
+
+
+}
+
+.line-2{
+	border-bottom: 3px solid #40c0c3;
+    display: block;
+    margin: 0 auto;
+    width: 5%;
+    margin-bottom: 5%;
+
+}
+
+.layer-1 h1{
+	text-transform: uppercase;
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 600;
+	letter-spacing: 5px;
+	color: cyan;
+	font-size: 30px;
+}
+
+
+
+.one{
+	background-color: #262626;
+	padding: 20px;
+	width: 300px;
+	height: 300px;
+	color: #fff;
+	position: relative;
+	margin-top: 10%;
+
+	
+	
+}
+
+.one .layer-1{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 1px solid cyan;
+ padding: 20px;
+ box-sizing: border-box;
+ transition: 0.5s;
+ background: #262626;
+ z-index: 3;
+ overflow: hidden;
+
+}
+
+.one .layer-1:before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -110%;
+   width: 100%;
+   height: 100%;
+   background: rgba(255,255,255,0.1);
+   pointer-events: none;
+   transition: 0.5s;
+   transform: skewX(-5deg);
+
+
+
+}
+
+.one:hover .layer-1{
+
+top: -10px;
+ left: 10px;
+ box-shadow: 0 5px 20px rgba(0,0,0,1);
+	
+}
+
+.one:hover .layer-1:before{
+
+left: -50%;
+
+}
+
+
+
+.one .layer-2{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 1px solid cyan;
+
+ box-sizing: border-box;
+ transition: 0.5s;
+ background: #262626;
+ z-index: 2;
+
+}
+
+.one:hover .layer-2{
+
+top: 0px;
+ left: 0px;
+ box-shadow: 0 5px 20px rgba(0,0,0,1);
+
+}
+
+.one .layer-3{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 1px solid cyan;
+
+ box-sizing: border-box;
+ transition: 0.5s;
+ background: #262626;
+ z-index: 1;
+box-shadow: 0 20px 50px rgba(0,0,0,1);
+}
+
+.one:hover .layer-3{
+
+top: 10px;
+ left: -10px;
+ 
+
+}
+
+section.service-2 {
+
+    margin-top: 2%;
+}
+
+section#Service {
+    padding-bottom: 5%;
+    padding-top: 0;
+}
+
+/*
+====================
+work section css
+====================
+
+*/
+
+section#work {
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+.work-title h2{
+font-family: 'Cinzel Decorative', cursive;
+margin-top: 5%;
+text-transform: uppercase;
+font-weight: 600;
+
+}
+
+.line-3{
+	border-bottom: 3px solid #40c0c3;
+	display: block;
+	margin: 0 auto;
+	width: 10%;
+	height: 
+}
+
+.testing{
+display: table;
+text-align: center;
+padding-top: 3%;
+
+}
+
+.work-box .work-detail h4 {
+    font-size: 18px;
+    color: #000 ;
+}
+
+.work-box .work-detail p {
+    color: #000;
+    font-size: 14px;
+
+}
+
+.work_menu li a{
+	letter-spacing: 0.03em;
+	font-weight: 600;
+	font-size: 14px;
+	color: rgba(0,0,0,0.5);
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.work_menu li a:hover{
+	color: cyan;
+}
+.work_item{
+	padding: 20px;
+    position: relative;
+}
+.work_item .work-box{
+	margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.work_item .work-box .work-img{
+
+	transition: all 0.3s ease 0s;
+}
+.work_item .work-box img{
+	top: 0;
+	position: relative;
+}
+.work_item .work-box img {
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+}
+
+.work_item .work-box:hover img {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1, 1);
+    top: -88px;
+}
+
+.work_item .work-detail {
+    height: auto;
+    position: absolute;
+    background-color: #fff;
+    opacity: 0;
+    bottom: -110px;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.work-box:hover .work-detail {
+    bottom: 0;
+}
+
+.work-box:hover .work-detail {
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+}
+
+
+/*
+===========================
+client feedback
+=========================
+
+*/
+
+section.Client {
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+
+.feedback h2{
+	font-family: 'Cinzel Decorative', cursive;
+margin-top: 5%;
+text-transform: uppercase;
+font-weight: 600;
+
+}
+
+.line-4{
+	border-bottom: 3px solid #40c0c3;
+	display: block;
+	margin: 0 auto;
+	width: 10%;
+	
+}
+
+.client-slider{
+
+
+	margin-top: 5%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 12%;
+    right: 14%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+/*
+====================
+contact section css
+=====================
+
+
+*/
+
+section#contact {
+    padding-top: 0;
+        padding-bottom: 0;
+}
+
+.contact-title h2{
+
+	font-family: 'Cinzel Decorative', cursive;
+margin-top: 5%;
+text-transform: uppercase;
+font-weight: 600;
+
+
+}
+
+.line-5{
+border-bottom: 3px solid #40c0c3;
+	display: block;
+	margin: 0 auto;
+	width: 10%;
+
+}
+
+/*
+====================
+contact section css
+====================
+
+*/
+.social-icon{
+	margin-top: 5%;
+}
+
+.icon{
+
+	transform: translate(0%, 0%);
+	margin: 0;
+	
+
+	
+}
+
+.social-icon ul li{
+	list-style: none;
+	margin: 0 30px;
+}
+
+.icon li a .fa{
+	    color: #40c0c3;
+	    transition: 0.5s;
+	    font-size: 30px;
+	    line-height: 50px;
+}
+.icon li a{
+background: black;
+width: 50px;
+height: 50px;
+position: relative;
+display: block;
+text-align: center;
+transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+transition: 0.5s;
+box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+.icon li a:before{
+   content: "";
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.icon li a:after{
+ content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+.icon li a:hover{
+
+transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+box-shadow: -50px 50px 20px rgba(0,0,0,0.5);
+
+}
+
+.formbox{
+	margin-top: 5%;
+	padding: 30px;
+	
+}
+
+.button{
+	text-align: center;
+	width: 100%;
+	border: none;
+	border-radius: 50px;
+	transition: 0.5s;
+}
+
+.button:hover{
+	background-color: cyan;
+	cursor: pointer;
+}
+
+.inputbox{
+
+	box-sizing: border-box;
+	
+}
+
+.input{
+
+
+
+	width: 100%;
+	height: 30px;
+	background: transparent;
+	    border: none;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 2px solid;
+
+}
+
+.inputText{
+
+
+	transition: 0.5s;
+	opacity: 0.5;
+}
+
+/*
+===================
+map section css
+================
+
+*/
+
+section#map {
+    padding-top: 2%;
+}
+
+.location h2{
+
+		font-family: 'Cinzel Decorative', cursive;
+margin-top: 5%;
+text-transform: uppercase;
+font-weight: 600;
+
+}
+
+.line-5{
+
+border-bottom: 3px solid #40c0c3;
+	display: block;
+	margin: 0 auto;
+	width: 10%;
+
+
+}
+
+.maps{
+	margin-top: 5%;
+}
